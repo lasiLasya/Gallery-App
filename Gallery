@@ -90,7 +90,7 @@ class Gallery extends Component {
         <p>Nature Photography by Rahul</p>
         <ul>
           {imagesList.map(imageDetails => (
-            <Gallery
+            <ThumbnailItem
               key={imageDetails.id}
               isActive={imageDetails.id === image.id}
               changeImage={this.onClickThumbImg}
