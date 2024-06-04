@@ -1,0 +1,23 @@
+// Write your code here.
+
+import './index.css'
+const ThumbnailItem = props => {
+  const {imageDetails, changeImage, isActive} = props
+  const {thumbnailAltUrl, thumbnailAltText, id} = imageDetails
+  const activeClassName = isActive ? 'active-btn' : ''
+  const onChangeImage = () => {
+    changeImage(id)
+  }
+  return (
+    <li>
+      <button type="button" className={`tab-btn ${activeClassName}`}>
+        <img
+          src={thumbnailAltUrl}
+          alt={thumbnailAltText}
+          onClick={this.onChangeImage}
+        />
+      </button>
+    </li>
+  )
+}
+export default ThumbnailItem
